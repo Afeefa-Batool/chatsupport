@@ -38,7 +38,7 @@ html {
     justify-content: center;
     width: 100%;
     min-height: 100%;
-    padding: 20px;
+    padding: 90px;
   }
   
   #formContent {
@@ -103,7 +103,7 @@ html {
     transition: all 0.3s ease-in-out;
   }
   .wrapper fadeInDown{
-    margin-top: 42px;
+    margin-top: 102px;
   }
     
 
@@ -262,6 +262,8 @@ html {
   } 
   
   #icon {
-    width:60%;
-  }
+    height: 172px;
+    width: 179px;
+}
+  
   
