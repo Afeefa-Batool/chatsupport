@@ -1,15 +1,28 @@
 import React, { useState, useEffect } from "react";
-import {auth} from '../firebase'
-const Userlogin = () => {
+import { auth } from "../../config/firebase";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+const Signup = () => {
   const [email, setEmail] = useState("");
 
   const [password, setPassword] = useState("");
   const [array, setNewArray] = useState([]);
-  const onSubmit = (e) => {
+  const navigate = useNavigate();
+
+  const onSubmit = async (e) => {
     e.preventDefault();
     const data = { email: email, password: password };
     setNewArray([...array, data]);
-    console.log(array);
+    // console.log(array);
+    try {
+      const result = await auth.createUserWithEmailAndPassword(email, password);
+      toast.success(`welcome ${email}`);
+
+      // toast.success("welcome user");
+      navigate("/signin");
+    } catch (err) {
+      toast.error("somthing wrong");
+    }
   };
 
   return (
@@ -50,4 +63,4 @@ const Userlogin = () => {
   );
 };
 
-export default Userlogin;
+export default Signup;
