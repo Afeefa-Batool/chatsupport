@@ -8,7 +8,7 @@ const Navbar = (props) => {
   const navigate = useNavigate();
 
   return (
-    <div className="container col-md-8 text-center">
+    <div className="container-fluid text-center">
       <nav className="navbar navbar-expand-sm   navbar-dark bg-info">
         <div className="container-fluid ">
           <NavLink className="navbar-brand " to="/">

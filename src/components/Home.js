@@ -1,7 +1,7 @@
 import React from 'react';
 const Home = () => {
     return (
-        <div className="container col-md-8 text-center mt-2">
+        <div className="container-fluid text-center mt-2">
           <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={0} className="active" aria-current="true" aria-label="Slide 1" />
